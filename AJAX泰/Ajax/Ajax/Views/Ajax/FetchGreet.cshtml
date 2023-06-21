@@ -1,0 +1,66 @@
+﻿
+
+<button class="btn btn-primary" onclick="fetchgetGreetAsync()">fetchgetGreetAsync</button>
+<button class="btn btn-primary" onclick="fetchpostGreetAsync()">fetchpostGreetAsync</button>
+
+
+
+<img id="animator" src="~/images/loading2.gif" style="width:32px; height:32px;display:none" />
+
+<div id="result"></div>
+
+@section Scripts
+    {
+    <script>
+        // 先行定義未來修改此處即可改變網站
+        var baseAddress = "https://localhost:7029"
+
+        function fetchgetGreetAsync() {
+            // alert("jQuerygetGreetAsync");
+            var p = encodeURI("Name=台大明");
+            $("#animator").show();
+            fetch(`${baseAddress}/Ajax/Greet?${p}`,{
+                method:"GET"
+            }).then(function(result){
+                if(result.ok){
+                    return result.text();
+                    // return result.json();
+                }
+            }).then(function(data){
+                $("#animator").hide();
+                $("#result").text(data);
+            }).catch(function(err){
+                $("#animator").hide();
+                alert(err);
+            });
+           
+
+        };
+        function fetchpostGreetAsync() {
+            // alert("jQuerypostGreetAsync");
+            // var p = encodeURI("Name=就是明");
+            var data={
+                Name:"就是明"
+            }
+            $("#animator").show();
+            fetch(`${baseAddress}/Ajax/FetchPostGreet`, {
+                method: "POST",
+                body:JSON.stringify(data),
+                headers:{
+                    'content-type':"application/json"
+                }
+            }).then(function (result) {
+                if (result.ok) {
+                    return result.text();
+                    // return result.json();
+                }
+            }).then(function (data) {
+                $("#animator").hide();
+                $("#result").text(data);
+            }).catch(function (err) {
+                $("#animator").hide();
+                alert(err);
+            });
+        }
+    </script>
+}

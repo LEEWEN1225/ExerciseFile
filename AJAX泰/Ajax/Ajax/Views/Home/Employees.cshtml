@@ -1,0 +1,27 @@
+﻿<button class="btn btn-primary" onclick="getEmployees()">查詢所有員工紀錄</button>
+
+@section Scripts{
+    <script>
+        var baseAddress = "https://localhost:7029";
+        function getEmployees(){
+            //alert("getEmployees");
+            $.ajax(
+                {
+                type:"GET",
+                url:`${baseAddress}/api/Employees`
+
+            }).done(function(data)
+            {
+                alert(data);
+            }).fail(function(err)
+            {
+
+                alert(`${err.statusCode}:${err.statusText}`);
+            
+
+            });
+        }
+
+    </script>
+
+}

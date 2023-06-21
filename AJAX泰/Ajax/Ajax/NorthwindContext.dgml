@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Employees" Category="EntityType" Annotations="" BaseClass="" Bounds="51.59,42,599.826666666667,361.44" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Employees" Name="Employees" UseManualLocation="True" />
+    <Node Id="Employees.Address" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 60" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="342.886717936198,137.240389709473,108.706666666667,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Address (string)" MaxLength="(60)" Name="Address" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Employees.BirthDate" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnType: datetime" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="242.813356119792,302.960352783203,144.336666666667,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="BirthDate (DateTime?)" MaxLength="None" Name="BirthDate" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime?" ValueGenerated="None" />
+    <Node Id="Employees.City" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 15" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="71.5900187683105,82.0003651428223,84.71,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="City (string)" MaxLength="(15)" Name="City" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Employees.Country" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 15" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="204.653352864583,137.240389709473,108.233333333333,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Country (string)" MaxLength="(15)" Name="Country" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Employees.EmployeeId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: EmployeeID SqlServer:ValueGenerationStrategy: IdentityColumn" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="71.5900272623698,192.480379943848,112.146666666667,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="EmployeeId (int)" MaxLength="None" Name="EmployeeId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Employees.Extension" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 4" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="213.736693725586,192.480379943848,117.28,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Extension (string)" MaxLength="(4)" Name="Extension" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Employees.FirstName" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 10" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="510.596683349609,192.480379943848,120.82,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="FirstName (string)" MaxLength="(10)" Name="FirstName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Employees.HireDate" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnType: datetime" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="71.5900201924642,302.960352783203,141.223333333333,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="HireDate (DateTime?)" MaxLength="None" Name="HireDate" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime?" ValueGenerated="None" />
+    <Node Id="Employees.HomePhone" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 24" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="381.306748860677,247.720362548828,133.763333333333,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="HomePhone (string)" MaxLength="(24)" Name="HomePhone" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Employees.InverseReportsToNavigation" Category="Navigation Collection" Bounds="259.476648152669,358.200373535156,196.623333333333,25.24" Dependent="Employees" Field="" Inverse="ReportsToNavigation" Label="InverseReportsToNavigation (*)" Name="InverseReportsToNavigation" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;Employees&gt;" />
+    <Node Id="Employees.LastName" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 20" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="361.016671142578,192.480379943848,119.58,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="LastName (string)" MaxLength="(20)" Name="LastName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Employees.Notes" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnType: ntext" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="303.380013427734,82.0003651428223,96.83,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Notes (string)" MaxLength="None" Name="Notes" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Employees.Photo" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnType: image" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="430.210035400391,82.0003651428223,97.34,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Photo (byte[])" MaxLength="None" Name="Photo" PropertyAccessMode="PropertyAccessMode.Default" Type="byte[]" ValueGenerated="None" />
+    <Node Id="Employees.PhotoPath" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 255" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="71.5900114949544,247.720362548828,122.463333333333,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="PhotoPath (string)" MaxLength="(255)" Name="PhotoPath" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Employees.PostalCode" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 10" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="224.053341267904,247.720362548828,127.253333333333,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="PostalCode (string)" MaxLength="(10)" Name="PostalCode" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Employees.Region" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 15" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="71.5900183614095,137.240389709473,103.063333333333,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Region (string)" MaxLength="(15)" Name="Region" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Employees.ReportsTo" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="481.593322753906,137.240389709473,109.5,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ReportsTo (int?)" MaxLength="None" Name="ReportsTo" PropertyAccessMode="PropertyAccessMode.Default" Type="int?" ValueGenerated="None" />
+    <Node Id="Employees.ReportsToNavigation" Category="Navigation Property" Bounds="71.59001856486,358.200373535156,157.886666666667,25.24" Dependent="" Field="" Inverse="InverseReportsToNavigation" Label="ReportsToNavigation (1)" Name="ReportsToNavigation" Principal="Employees" PropertyAccessMode="PropertyAccessMode.Default" Type="Employees" />
+    <Node Id="Employees.Title" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 30" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="186.30001159668,82.0003651428223,87.08,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Title (string)" MaxLength="(30)" Name="Title" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Employees.TitleOfCourtesy" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 25" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="417.150017496745,302.960352783203,151.006666666667,25.24" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="TitleOfCourtesy (string)" MaxLength="(25)" Name="TitleOfCourtesy" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="IModel" Category="Model" Annotations="BaseTypeDiscoveryConvention:DerivedTypes: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.List`1[Microsoft.EntityFrameworkCore.Metadata.IConventionEntityType]] Relational:MaxIdentifierLength: 128 RelationshipDiscoveryConvention:InverseNavigationCandidates: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.SortedSet`1[System.Type]] SqlServer:ValueGenerationStrategy: IdentityColumn" Bounds="31.5899966303363,1.99992061055491,639.826731313068,421.440973129257" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" Label="NorthwindContext" ProductVersion="6.0.15" PropertyAccessMode="PropertyAccessMode.Default" />
+  </Nodes>
+  <Links>
+    <Link Source="Employees" Target="Employees" Category="Foreign Key" Annotations="Relational:Name: FK_Employees_Employees" Bounds="234.165390014648,12,227.400100708008,30" From="Employees.ReportsTo" IsUnique="False" Label="1:*" LabelBounds="343.958333333333,-7.24000000000001,15.0899999999999,15.24" Name="Employees -&gt; Employees" To="Employees.EmployeeId" />
+    <Link Source="Employees" Target="Employees.Address" Category="Contains" />
+    <Link Source="Employees" Target="Employees.BirthDate" Category="Contains" />
+    <Link Source="Employees" Target="Employees.City" Category="Contains" />
+    <Link Source="Employees" Target="Employees.Country" Category="Contains" />
+    <Link Source="Employees" Target="Employees.EmployeeId" Category="Contains" />
+    <Link Source="Employees" Target="Employees.Extension" Category="Contains" />
+    <Link Source="Employees" Target="Employees.FirstName" Category="Contains" />
+    <Link Source="Employees" Target="Employees.HireDate" Category="Contains" />
+    <Link Source="Employees" Target="Employees.HomePhone" Category="Contains" />
+    <Link Source="Employees" Target="Employees.InverseReportsToNavigation" Category="Contains" />
+    <Link Source="Employees" Target="Employees.LastName" Category="Contains" />
+    <Link Source="Employees" Target="Employees.Notes" Category="Contains" />
+    <Link Source="Employees" Target="Employees.Photo" Category="Contains" />
+    <Link Source="Employees" Target="Employees.PhotoPath" Category="Contains" />
+    <Link Source="Employees" Target="Employees.PostalCode" Category="Contains" />
+    <Link Source="Employees" Target="Employees.Region" Category="Contains" />
+    <Link Source="Employees" Target="Employees.ReportsTo" Category="Contains" />
+    <Link Source="Employees" Target="Employees.ReportsToNavigation" Category="Contains" />
+    <Link Source="Employees" Target="Employees.Title" Category="Contains" />
+    <Link Source="Employees" Target="Employees.TitleOfCourtesy" Category="Contains" />
+    <Link Source="IModel" Target="Employees" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="包含" Description="連結的來源是否包含目標物件" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="由下列包含" IsContainment="True" OutgoingActionLabel="包含" />
+    <Category Id="EntityType" />
+    <Category Id="Foreign Key" />
+    <Category Id="Model" />
+    <Category Id="Navigation Collection" />
+    <Category Id="Navigation Property" />
+    <Category Id="Property Foreign" />
+    <Category Id="Property Optional" />
+    <Category Id="Property Primary" />
+    <Category Id="Property Required" />
+  </Categories>
+  <Properties>
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass" Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Field" Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="群組" Description="將節點顯示為群組" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsAbstract" Label="IsAbstract" Description="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="Label" Label="標籤" Description="可註釋物件的可顯示標籤" DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="MaxLength" DataType="System.String" />
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type" Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>

@@ -1,0 +1,78 @@
+﻿
+<button class="btn btn-primary" onclick="jQuerygetGreetSync()">jQuerygetGreetSyncCall</button>
+<button class="btn btn-primary" onclick="jQuerygetGreetAsync()">jQuerygetGreetAsync</button>
+<button class="btn btn-primary" onclick="jQuerypostGreetAsync()">jQuerypostGreetAsync</button>
+
+
+
+<img id="animator" src="~/images/loading2.gif" style="width:32px; height:32px;display:none" />
+
+<div id="result"></div>
+
+@section Scripts
+    {
+    <script>
+        // 先行定義未來修改此處即可改變網站
+        var baseAddress = "https://localhost:7029"
+        function jQuerygetGreetSync() {
+            // alert("jQuerygetGreetSync");
+            var p=encodeURI("Name=呂小明");
+            $("#animator").show();
+            // ajax/done/fail先寫完再寫過程
+            $.ajax({
+                type:"GET",
+                //同步
+                timeout:5000,
+                async:false,
+                url:`${baseAddress}/Ajax/Greet?${p}`
+            }).done(function(data){
+                // alert(data);
+                $("#result").text(data);
+                $("#animator").hide();
+            }).fail(function(err){
+                alert(err.statusText);
+                $("#animator").hide();
+            });
+            
+        }
+        function jQuerygetGreetAsync() {
+            // alert("jQuerygetGreetAsync");
+            var p = encodeURI("Name=皇大明");
+            $("#animator").show();
+            // ajax/done/fail先寫完再寫過程
+            $.ajax({
+                type: "GET",
+                url: `${baseAddress}/Ajax/Greet?${p}`
+            }).done(function (data) {
+                // alert(data);
+                $("#result").text(data);
+                $("#animator").hide();
+            }).fail(function (err) {
+                alert(err.statusText);
+                $("#animator").hide();
+            });
+            
+        };
+        function jQuerypostGreetAsync() {
+            // alert("jQuerypostGreetAsync");
+            var p = encodeURI("Name=呂小明");
+            $("#animator").show();
+            // ajax/done/fail先寫完再寫過程
+            $.ajax({
+                type: "POST",
+                data:{
+                    // content-type
+                    Name: "星小明"
+                },
+                url: `${baseAddress}/Ajax/Greet`
+            }).done(function (data) {
+                // alert(data);
+                $("#result").text(data);
+                $("#animator").hide();
+            }).fail(function (err) {
+                alert(err.statusText);
+                $("#animator").hide();
+            });
+        }
+    </script>
+}

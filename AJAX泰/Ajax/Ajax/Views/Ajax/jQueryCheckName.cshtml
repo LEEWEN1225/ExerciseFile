@@ -1,0 +1,57 @@
+﻿
+<div class="container">
+    <div class="row border">
+        <div class="form-group">
+            <label class="form-label">First Name:</label>
+            <input class="form-control" type="text" id="firstName" onkeyup="JQueryCheckNameAsync()" />
+            
+        </div>
+        @*<div class="form-group mt-3">*@
+           @* <button class="btn btn-primary" onclick="JavaScriptCheckNameAsync()">JavaScriptCheckNameAsync</button>*@
+           
+        @*</div>*@
+        <div class="form-group mt-3 btn-warning">
+            <img id="animator" src="~/images/loading2.gif" style="width:32px; height:32px;display:none" />
+
+            <div id="result"></div>
+        </div>
+    </div>
+    
+   
+   
+</div>
+
+
+@section Scripts
+{
+    <script>
+        // 先行定義未來修改此處即可改變網站
+        var baseAddress = "https://localhost:7029"
+        function JQueryCheckNameAsync() {
+            // alert("postGreetAsync");
+            var p = encodeURI("Name=呂小明");
+            $("#animator").show();
+            // ajax/done/fail先寫完再寫過程
+            $.ajax({
+                type: "POST",
+                data: {
+                    // content-type
+                    FirstName: $('#firstName').val(),
+                },
+                url: `${baseAddress}/Ajax/CheckName`
+            }).done(function (data) {
+                // alert(data);
+                if(data=="true"){
+                    $("#result").text("員工在職中");
+                }else{
+                    $("#result").text("查無此員工");
+                }
+                
+                $("#animator").hide();
+            }).fail(function (err) {
+                alert(err.statusText);
+                $("#animator").hide();
+            });
+        }
+    </script>
+}

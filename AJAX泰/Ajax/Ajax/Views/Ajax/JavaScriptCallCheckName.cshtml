@@ -1,0 +1,46 @@
+﻿<div class="container">
+    <div class="form-group">
+        <label class="form-label">First Name</label>
+        <input type="text" id="firstName" class="form-control" onkeyup="JQueryCheckNameAnync()"></input>
+           
+    </div>
+</div>
+
+@section Scripts
+    {
+           <script>
+                var baseAddress = "https://localhost:7029/";
+
+
+        function JavaScriptCheckNameAnync() {
+
+            var xmlHttp = new XMLHttpRequest();
+            if (xmlHttp != null) {
+              
+                xmlHttp.open("POST", `${baseAddress}/Ajax/Greet?{p}`, true);
+                document.getElementById = ("animator").style.display = "inline";
+                //xmlHttp.timeout=5000;
+                xmlHttp.onreadystatechange = function () {
+                    if (xmlHttp.readyState == 4) {
+                            var message =docodeURL(xmlHttp.responseText);
+                        if (xmlHttp.status == 200) {
+                            document.getElementById("result").textContent = "員工在職中";
+                           
+                        }else{
+                            document.getElementById("result").textContent = "員工不存在";
+                        }
+                        document.getElementById("animator").style.display = "none";
+
+                    }
+                };
+                xmlHttp.sendRequestHeader("content-type","application/x-www-form-urlencoded");
+                xmlHttp.send(`FirstName=${document.geteElementById("firstName").value}`);
+
+            }
+            else {
+                alert("瀏覽器不支援XMLHttpRequest!");
+            }
+        }
+        
+    </script>
+}
