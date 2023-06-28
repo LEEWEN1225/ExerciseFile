@@ -1,3 +1,0 @@
-# ExerciseFile
-
-vsbbbwbwb
